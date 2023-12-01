@@ -50,6 +50,10 @@ namespace Library_Management_System.Abstract
                 Console.WriteLine("Book is not currently borrowed.");
             }
         }
+
+        public virtual void Print()
+        {
+        }
     }
 
 }

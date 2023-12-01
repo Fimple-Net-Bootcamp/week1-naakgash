@@ -9,11 +9,21 @@ namespace Library_Management_System.Concrete
 {
     internal sealed class Book : Publication
     {
-        public string Author { get; set; }
-        public Book(string title, string author, string publisher, int pages)
+        internal string Author { get; set; }
+        internal Book(string title, string author, string publisher, int pages)
         : base(title, publisher, pages)
         {
             Author = author;
+        }
+        public override void Print()
+        {
+            Console.WriteLine($"ID: {ID}");
+            Console.WriteLine($"Title: {Title}");
+            Console.WriteLine($"Author: {Author}");
+            Console.WriteLine($"Publisher: {Publisher}");
+            Console.WriteLine($"Publication Date: {PublicationDate.ToShortDateString()}");
+            Console.WriteLine($"Pages: {Pages}");
+            Console.WriteLine($"Borrowed: {isBorrowed}");
         }
 
     }

@@ -21,9 +21,8 @@ namespace Library_Management_System.Abstract
             Surname = surname;
             BorrowedPublicationList = new List<Publication>();
         }
-        public void Print()
+        public virtual void Print()
         {
-            
         }
 
         public void Borrow(Publication publication)

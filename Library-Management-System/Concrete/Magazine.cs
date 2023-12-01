@@ -16,5 +16,16 @@ namespace Library_Management_System.Concrete
         {
             ReleaseDate = releaseMonth;
         }
+        public override void Print()
+        {
+            Console.WriteLine($"ID: {ID}");
+            Console.WriteLine($"Title: {Title}");
+            Console.WriteLine($"Publisher: {Publisher}");
+            Console.WriteLine($"Publication Date: {PublicationDate.ToShortDateString()}");
+            Console.WriteLine($"Release Date: {ReleaseDate.ToShortDateString()}");
+            Console.WriteLine($"Pages: {Pages}");
+            Console.WriteLine($"Publish Frequency In Months: {PublishFrequencyInMonths}");
+            Console.WriteLine($"Borrowed: {isBorrowed}");
+        }
     }
 }
